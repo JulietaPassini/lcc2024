@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #073430;
+}
+
+.square {
+  background: #073430;
+  border: 1px solid #f49c30;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  color: #e98a15;
+}
+.paint {
+  background-color: #e98a15; 
+}
+
+
+.board {
+  display: grid;
+}
+
+.horizontal {
+  display: flex;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.rowClues {
+  display: grid;
+}
+
+.colClues {
+  display: grid;
+}
+
+.clue {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #145d57;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 3px;
+  color:white;
+}
+.clueSat {
+  background-color: rgb(54, 129, 54);
+  color: white;
+}
+
+.clue div {
+  margin: 2px
+}
+
+.colClues .clue {
+  flex-direction: column;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-info {
+  margin-left: 50px;
+  margin-top: 15px;
+  font-family: "League Spartan", sans-serif;
+  font-size: 30px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+.container{
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.button {
+  background-color: #d2d2d2;
+  width: 60px; /* Reducir el ancho */
+  height: 30px; /* Reducir la altura */
+  border-radius: 20px; /* Hacer el botón más redondo */
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+}
+
+.button::before {
+  position: absolute;
+  content: '';
+  background-color: #fff;
+  width: 25px; /* Reducir el ancho del pseudo-elemento */
+  height: 25px; /* Reducir la altura del pseudo-elemento */
+  border-radius: 70%; /* Hacer el pseudo-elemento completamente redondo */
+  margin: 2.5px; /* Ajustar el margen para mantener la apariencia deseada */
+  transition: 0.2s;
+}
+
+input:checked + .button{
+  background-color: #e98a15;
+}
+input:checked + .button::before{
+  transform: translateX(30px);
+}
+input{
+  display: none;
+}
+
+.league-spartan-text {
+  font-family: "League Spartan", sans-serif; /* Reemplaza "League Spartan" con el nombre real de la fuente */
+  font-weight: 600; /* Usa un valor de peso de 100 a 900 */
+  font-style: normal;
+  font-size: 100px;
+  color:#f49c30;
+  margin-bottom: 10px;
+}
+
+.solution {
+  background-color: #d2d2d2;
+  color: #073430;
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.solution:hover {
+  background-color: #e98a15;
+  color: #fff;
+}
+
+
+
+
+
+
